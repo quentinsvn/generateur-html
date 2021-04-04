@@ -1,0 +1,113 @@
+CTI:Manuel utilisateur
+
+CT1:Lancement du générateur
+CPS:Afin d’exécuter le générateur,  il suffit simplement de lancer le raccourcis nommer «Lancement du générateur». 
+CPS:Une console s’ouvrira par la suite exécutant plusieurs commandes qui compilera et exécutera le générateur de document. 
+CPS:Une fois, le générateur terminer tout les fichiers sources que vous avez placer dans le dossier «REP_SOURCE» se trouvera sous forme de pages internet (.html) dans le répertoire «REP_RACINE».
+
+CPS:Les documents numérique seront nommer selon le nom choisis dans la page de garde avec le paramètre «FGA» ( voir 3.2 Paramètre de ligne / Page de garde ). 
+CPS:Le page de garde portera le nom, puis ensuite le sommaire seras nommer «nom_00.html», puis les chapitres seront numéroter de 0 à 99 donc «nom_NN.html», NN représente le numéro du chapitre.
+
+CT1:Organisation des fichiers
+CPS:Afin de générer les documents numérique, il faut placer les fichiers source regroupant les informations à mettre dans le dossier «REP_SOURCE». 
+CPS:Le générateur lira ensuite les fichiers à l’intérieur et généra automatiquement les pages internet.
+
+CPS:Mais avant de faire ceci, il faut indiquer au générateur ce qu’il faut lire et dans quel ordre ! 
+
+CPC:Tous les fichiers se trouvant dans «REP_SOURCE» doit être mis sous forme de .data . 
+CPC:Afin d’indiquer au générateur quoi lire, il faudra créer un fichier nommer «table_ordonnancement.data» précisément comme il est indiquer sinon le générateur ne pourra reconnaître le fichier. 
+CPC:Dans ce fichier, il faudra simplement mettre par ligne le nom des fichiers par ordre selon vous souhaitez voir apparaître, la première ligne seras le nom du fichier pour la création de la page de garde. 
+CPC:Ensuite les lignes suivantes seras les chapitres. Pour la création des chapitres veuillez faire :  1chapitre = 1 fichier.data .
+
+CPS:Exemple de donnée que pourrons retrouver dans «table_ordonancement.data» :
+
+CPS:ligne 1: Page_de_garde.data
+
+CPS:ligne 2: Chapitre1.data
+
+CPS:ligne 3: Chapitre2.data
+
+CPS:ligne 4: Chapitre3.data
+
+CPS:Pour le nom des fichiers, il est important de pas mettre d’espace cela pourrait provoquait des erreurs, à la place veuillez utiliser des « _ ». 
+
+CPS:Si vous souhaitez intégrer des images, il suffit de placer les images dans le dossier «REP_RACINE/images/». 
+CPS:Et enfin pour les images animé, il faut les placer dans «REP_RACINE/animations».
+
+CT1:Création des fichiers ressources
+
+CPS:Afin de créer les fichiers sources, il faut utiliser des paramètres de ligne qui permet de définir pour chaque ligne sa fonction, si c’est un titre, un paragraphe, une image etc. 
+CPS:Nous avons aussi l’utilisation de balise, qui peuvent eux par rapport au paramètre de ligne qui se trouve au début de ligne, être placer n’importe où dans les lignes. 
+
+CT2:Balise
+
+CPS:Les balises peuvent être utiliser partout sur les lignes et ne dispose d’aucun limite d’utilisation. 
+CPS:Leur fonction permet d’indiquer à quel endroit vous souhaitez mettre en gras, en italique ou faire un saut de ligne en particulier.
+
+CIM:pr.png:parametres
+
+CT2:Paramètre de ligne
+
+CT1:Personnalisation des documents numérique
+
+CT2:Paramètre de ligne
+
+CPS:Pour les paramètres doivent être placer à chaque début de ligne avec «:» ensuite pour que le générateur puisse comprendre le paramètre. 
+
+CPS:Exemple
+
+CIM:pr2.png:parametres2
+
+CPS:A chaque nouveau paramètre différent laisser un ligne entre pour bien différencier les différent paramètres afin d’éviter les erreurs. 
+
+CPS:Exemple
+
+CIM:pr3.png:parametres3
+
+CT2:Page de garde
+CLO:FGA = Préfixes des noms de fichier
+
+CLO:TGA = Titre principal du document
+
+CLO:PGA = Paragraphe d'information
+
+CLO:IGA =  Image. Exemple: IGA:Photo.png:photo
+
+CCO:La première partie est le nom de la photo dans le répertoire.
+    La deuxième partie est le nom alternatif de l’image en cas d’un erreur
+    Les deux parties doivent être séparer par « : » . 
+
+CLO:TEN = Texte en en-tête de chaque chapitre.
+
+CCO:#/g#Une seule ligne de ce type dans le fichier maximum!#\g#
+
+CLO:TPI = Texte en pied de page de chaque chapitre.
+
+CCO:#/g#Une seule ligne de ce type dans le fichier maximum!#\g#
+
+CT2:Page de chapitre
+
+CLO:CTI = Nom du chapitre.
+CLO:CT1 = Titre niveau de 1.
+CLO:CT2 = Titre niveau de 2.
+CLO:/// = Commentaire. Cette ligne de donnera aucun affichage dans le document html elle servira simplement à commenter le code.
+CLO:CPS = Paragraphe simple. 
+CCO:#/g#Toutes les lignes successives de type CPS composeront un unique paragraphe.!#\g#
+    #/g#Un saut de ligne provoquera un nouveau paragraphe.#\g#
+CLO:CIM = Image. Exemple: IGA Photo.png photo
+CCO:La première partie est le nom de la photo dans le répertoire.
+    La deuxième partie est le nom alternatif de l’image en cas d’un erreur d’affichage.
+    #/g#Les deux parties doivent être séparer par « : » .#\g#
+CLO:CPC = Paragraphe encadré
+CLO:CCO = Paragraphe de type code. Affichera le paragraphe dans un style de code.
+CLO:C/C et C\C = Les deux seules paramètre qui permet d’encadrer tout ce qu’il se trouve entre les deux paramètres.
+CLO:CLO  = Créer une liste non ordonnée de niveau 1
+CLO:CAN =  Créer un « diaporama » où des images peuvent être défiler via des flèches. 
+
+CT1:Personnalisation des documents numérique
+
+C/C:
+CPS:Si vous souhaitez modifier le style graphique des documents numérique, il est possible en modifiant le fichier de style du document. 
+
+CPS:Le fichier se trouve dans «REP_RACINE/css/style.css», en éditant le fichier style.css vous pourrez trouver tout les lignes qui définit le style du document numérique commenté expliquant chaque fonction afin de vous aidez à personnaliser votre document à votre guise.
+C\C:

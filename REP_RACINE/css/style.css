@@ -1,0 +1,236 @@
+/* DEBUT CSS */
+
+/* SITE */
+body
+{
+    margin: 0;                                  /* Marge du site */
+    padding: 0;                                 /* Écarts de remplissage */
+    font-family: 'Roboto', sans-serif;          /* Police de caractère du site */
+    width: 100%;                                /* Taille du site */
+    height: 100%;                               /* Hauteur du site */
+    background-color: rgba(232,138,56,0.2);   /* Couleur de fond du site */
+    overflow-x: hidden;                         /* Scrollbar horizontal (axe x) masquée */
+}
+
+/*          EN-TÊTE            */
+header 
+{
+    background-color: #333333;  /* Couleur de fond du header */
+    color: white;               /* Couleur du texte */
+    height: 30px;                 /* Hauteur de l'en-tête */
+    text-align: center;           /* Alignement du texte (centré par défaut) */
+    padding-top: 10px;            /* Écarts de haut du texte */
+    width: 100%;                  /* Taille de l'en-tête */
+}
+
+
+header button /* Bouton retour arrière */
+{
+    float: left;                    /* Alignement (par défaut à gauche) */
+    margin-left: 10px;              /* Marge droite du bouton */
+    background-color: transparent;  /* Fond du bouton (par défaut transparent) */
+    color: white;                 /* Couleur de la flèche */
+    font-weight: 700;               /* Ecriture en gras */
+    border: none;                   /* Bordure du bouton (par défaut aucun) */
+    cursor: pointer;                /* Définition du type de curseur de souris lors du survolement de l'élément */ 
+    font-size: 20px;                /* Taille de la flèche */
+    outline: none;                  /* Contour lors du clique sur le bouton (par défaut aucun) */
+}
+/*****************************/
+
+/*     PIED DE PAGE     */
+footer 
+{
+    background:#333;        /* Couleur de fond */
+    color: white;           /* Couleur du texte  */
+    bottom:0;                 /* Définition du pied de page en bas du site */
+    width:100%;               /* Taille du pied de page */
+    height:30px;              /* Hauteur du pied de page */
+    text-align: center;       /* Alignement du texte à l'intérieur du pied de page */
+    padding-top: 10px;        /* Écarts du contenu du pied de page */
+    margin-top: 20px;         /* Marge du haut du pied de page */
+}
+/***********************/
+
+/* Bloc d'un ensemble de paragraphes */
+div
+{
+    border: thin solid black;                                                  /* Bordure du bloc (par défaut fin de couleur noir de type solid (ligne continue) ) */
+    margin-left: 10px;                                                           /* Marge gauche du bloc */
+    margin-right: 10px;                                                          /* Marge droite du bloc */
+    border-radius: 10px;                                                         /* Arrondissement des bordures du bloc */
+    box-shadow: 0px 10px 13px -7px #000000, 5px 9px 36px -7px rgba(0,0,0,0); /* Ombrage du bloc */
+}
+/***********************/
+
+/* TITRE */
+h1
+{
+    text-align: center;             /* Alignement du titre */
+    background-color: #e67e22;    /* Fond du titre */
+    color: white;                 /* Couleur du titre */
+    margin: 0;                      /* Marge du titre */
+}
+
+h2 
+{
+    text-decoration: underline; /* Soulignement du sous-titre */
+    padding-left: 10px;         /* Écarts du sous-titre */
+}
+
+h3 
+{
+    padding-left: 20px;     /* Écarts du sous-titre */
+}
+/***********************/
+
+/* PARAGRAPHES */
+p
+{
+    padding-left: 20px;     /* Écarts des paragraphes */
+    padding-right: 20px;
+}
+/***********************/
+
+/* Bloc d'un paragraphe */
+.cpc 
+{
+    margin-left: 10px;          /* Marge droite du bloc */
+    margin-right: 10px;         /* Marge gauche du bloc */
+    padding-top: 10px;          /* Écarts droit du bloc */
+    padding-bottom: 10px;       /* Écarts gauche du bloc */
+    border: thin solid black; /* Bordure du bloc (par défaut fin de couleur noir de type solid (ligne continue) ) */
+    transition: 0.3s;           /* Transition du bloc (apparaît au bout de x secondes). */
+    border-radius: 10px;        /* Arrondissement des bordures du bloc */
+}
+
+.cpc:hover /* Effet du bloc au passage de la souris */
+{
+    transition: 0.3s;                                                               /* Transition du bloc (apparaît au bout de x secondes). */
+    cursor: pointer;                                                                /* Définition du type de curseur de souris lors du survolement de l'élément */ 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 9px 36px -7px rgba(0,0,0,0);    /* Ombrage du bloc */
+}
+/***********************/
+
+/* Image page de garde */
+.iga 
+{
+    width: 640px;           /* Taille de l'image */
+    height: 800px;          /* Hauteur de l'image */
+    border-radius: 30px;    /* Arrondissement de l'image */
+}
+
+.iga:hover /* Effets de l'image au passage de la souris */
+{
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); /* Ombrage */
+    transition: 0.3s;                                                           /* Transition du bloc (apparaît au bout de x secondes). */
+}
+/***********************/
+
+/* IMAGES STATIQUES CHAPITRES */
+.cim 
+{
+    border-radius: 20px;            /* Arrondissement de l'image */
+    border: coral solid 2px;      /* Bordure du bloc (par défaut fin de couleur coraille de type solid (ligne continue) ) */
+    margin-left: 10px;              /* Marge droite de l'image */
+    
+}
+/***********************/
+
+/* IMAGE ANIMÉES */
+.CAN 
+{
+    border: none;           /* Bordure */
+    margin-bottom: 20px;    /* Espacement bas du paramètre */
+    box-shadow: none;       /* Ombrage (par défaut aucun */
+    width: 100%;            /* Taille des images */
+}
+
+.CAN img 
+{
+    width: 250px;               /* Taille des images */
+    height: 400px;              /* Hauteur des images */
+    border: #F90 solid 2px;   /* Bordure des images (par défaut fin de couleur orange de type solid (bordure continue ) */
+}
+
+.CAN button
+{
+    background-color: #F90; /* Couleur des boutons */
+    color: white;           /* Couleur de la flèche du bouton */
+    border-radius: 10px;      /* Arrondissement des bordures des boutons */
+    border: none;             /* Bordure */
+    width: 125px;             /* Tailles des boutons */
+    outline: none;            /* Contour des boutons */
+    cursor: pointer;          /* Curseur du bouton */
+    font-weight: 700;         /* Gras du texte */
+}
+/***********************/
+
+/* ICONES DU MENU */
+#pg_icon /* Icone pour revenir à la page de garde */
+{
+    float: right;           /* Alignement de l'îcone (par défaut à gauche) */
+    margin-right: 10px;     /* Marge gauche de l'îcone */
+    text-decoration: none;  
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+#sm_icon /* Icone pour revenir au sommaire */
+{
+    float: left;            /* Alignement de l'îcone (par défaut à droite) */
+    margin-left: 10px;      /* Marge droite de l'îcone */
+    text-decoration: none;
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+/* SOMMAIRE */
+.sm 
+{
+    border-radius: 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: none;
+    box-shadow: none;
+    background-color:rgba(232,138,56,0.2);          /* Fond du bloc du sommaire */
+    padding: 10px 10px;                               /* Écarts du contenu */
+    box-shadow: 0px 20px 0px -10px #BFAA8F, 
+                0px -20px 0px -10px #BFAA8F, 
+                20px 0px 0px -10px #BFAA8F, 
+                -20px 0px 0px -10px #BFAA8F, 
+                0px 0px 0px 10px #e67e22, 
+                5px 5px 15px 5px rgba(0,0,0,0);     /* Ombrage */
+}
+/***********************/
+
+/* SCROOLBAR */
+::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);      /* Ombrage */
+	background-color: #F5F5F5;                      /* Fond de la scroolbar */
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;                    /* Taille de la scroolbar */
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #F90;	                                                  /* Couleur de la scroolbar */
+	background-image: -webkit-linear-gradient(45deg,
+	                                          rgba(255, 255, 255, .2) 25%,
+											  transparent 25%,
+											  transparent 50%,
+											  rgba(255, 255, 255, .2) 50%,
+											  rgba(255, 255, 255, .2) 75%,
+											  transparent 75%,
+											  transparent)                      /* Effet de la scroolbar */
+}
+/***********************/
+
+/* FIN CSS */
